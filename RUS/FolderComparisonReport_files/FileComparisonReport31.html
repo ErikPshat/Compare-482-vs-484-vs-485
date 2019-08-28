@@ -1,0 +1,1290 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mg="http://www.araxis.com/2002/Merge/Reporting" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!--The layout and design of this report is Copyright © 2003-2018 Araxis Ltd. All rights reserved.-->
+<!--The copyright of the data content of this report belongs to the relevant copyright holders.-->
+<title>31. 
+Отчет сравнения файлов</title>
+<style type="text/css">
+body { background: #fff;  color: #000; margin: 0px 14px 14px 14px; }
+h1, h2, h3, h4, h5 {
+  padding: 0em;
+  margin: 1.5em 0em .25em 0em;
+  text-align: left;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 70%;
+  max-width: 55em;
+}
+body, h4, h5, p, ol, ul, li, td, th { font-family: Verdana, Arial, Helvetica, sans-serif; text-align: left; }
+
+h4, h5, p, ol, ul, li { font-size: 70%; }
+input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 120%;
+}
+
+h1 { margin: 14px 0em 1.2em 0em; font-size: 112%; line-height: 130%;}
+h2 { font-size: 125%; line-height: 84%;}
+h3 { margin-top: 1.4em; font-size: 81%; }
+h4 { margin-top: 1em; font-size: 70%; }
+h5 { margin-top: 1em; font-size: 100%; font-style: italic;}
+h1 strong, h2 strong, h3 strong, h4 strong { font-weight: bold; }
+
+p { margin: 6px 0em 6px 0em; max-width: 55em;}
+p.code, code {}
+p { font-size: 70%; line-height: 125%; }
+table { font-size: 70%;}
+
+p.copyright, .small { font-size: 60%; line-height: 120%; }
+p.copyright { margin: 3px 0px 0px 0px; padding: 0px; text-align: left; }
+acronym { font-variant: small-caps; }
+div.pad { padding: 3px; }
+span.lineEndings { color: red; font-size: 70%; }
+
+table.mgRowGroup, table.mgRowGroupFolder { border: 1px solid #a0a0a0; margin: 10px 0px 10px 0px; width: 100%; table-layout: fixed; border-collapse: collapse; }
+table.mgRowGroup td { vertical-align: top; padding: 0; }
+table.mgRowGroupFolder td { vertical-align: top; padding: 1px 0 1px 0; }
+div.IP { width: 2px; height: 1em; float: left; }
+
+img.mgFldrIcon {float: left; text-align: left; margin: -1px 2px 0px 0px;  height: 16px; width: 16px; border: none; vertical-align: top; background-color: transparent;}
+div.mgFldrIcon {float: left; width: auto;}
+span.left {float: left;width: auto;}
+span.right {float: right;width: auto;}
+
+table.bordered { border-collapse: collapse; border: 1px solid #a0a0a0; margin: 10px 0px 10px 0px;}
+table.bordered th, table.bordered td { vertical-align: top; padding: 3px; border: 1px solid #a0a0a0;}
+table.bordered th { background-color: #e5e5e5; }
+table.bordered td.group { background-color: #f5f5f5; }
+span.disabledNavigation { color: #a0a0a0; }
+div.navigation { margin-top: 14px; font-size: 70%; }
+div.comment { font-weight: normal; color: #000; font-family: Verdana, Arial, Helvetica, sans-serif; background-color: #fcfed8; padding: 2px 5px 2px 5px; border: 1px solid #E3E5C3; margin: 1px 2px 3px 2px; -moz-border-radius: 7px; border-radius: 7px; }
+
+                span.U1, span.U1 a {float: left; width: auto;color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.U1 a {text-decoration: underline;}
+td.U1 {color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.R1, span.R1 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.R1 a {text-decoration: underline;}
+td.R1 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.I1, span.I1 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.I1 a {text-decoration: underline;}
+td.I1 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.C1, span.C1 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.C1 a {text-decoration: underline;}
+td.C1 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgC1 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.UU2, span.UU2 a {float: left; width: auto;color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UU2 a {text-decoration: underline;}
+td.UU2 {color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UR2, span.UR2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UR2 a {text-decoration: underline;}
+td.UR2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UI2, span.UI2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UI2 a {text-decoration: underline;}
+td.UI2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UC2, span.UC2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.UC2 a {text-decoration: underline;}
+td.UC2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgUC2 {color: #400000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.RU2, span.RU2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RU2 a {text-decoration: underline;}
+td.RU2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RR2, span.RR2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RR2 a {text-decoration: underline;}
+td.RR2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RI2, span.RI2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RI2 a {text-decoration: underline;}
+td.RI2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RC2, span.RC2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.RC2 a {text-decoration: underline;}
+td.RC2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgRC2 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.IU2, span.IU2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.IU2 a {text-decoration: underline;}
+td.IU2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.IR2, span.IR2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.IR2 a {text-decoration: underline;}
+td.IR2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.II2, span.II2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.II2 a {text-decoration: underline;}
+td.II2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.IC2, span.IC2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.IC2 a {text-decoration: underline;}
+td.IC2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgIC2 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.CU2, span.CU2 a {float: left; width: auto;color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.CU2 a {text-decoration: underline;}
+td.CU2 {color: #400000; background-color: #D2E4F7; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgCU2 {color: #400000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.CR2, span.CR2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.CR2 a {text-decoration: underline;}
+td.CR2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgCR2 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.CI2, span.CI2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.CI2 a {text-decoration: underline;}
+td.CI2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgCI2 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.CC2, span.CC2 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.CC2 a {text-decoration: underline;}
+td.CC2 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgCC2 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+span.U3, span.U3 a {float: left; width: auto;color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.U3 a {text-decoration: underline;}
+td.U3 {color: #000000; background-color: #FFFFFF; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.R3, span.R3 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.R3 a {text-decoration: underline;}
+td.R3 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.I3, span.I3 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.I3 a {text-decoration: underline;}
+td.I3 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.C3, span.C3 a {float: left; width: auto;color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+span.C3 a {text-decoration: underline;}
+td.C3 {color: #800000; background-color: #A6CAF0; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; }
+td.nbgC3 {color: #800000; font-family: "Consolas"; font-weight: normal; font-style: normal; font-size: 9pt; text-decoration: none; background-color: #FFFFFF; }
+
+span.selected {background-color: #3d80df; color: #fff;}
+span.selected a {background-color: #3d80df; color: #fff; text-decoration: underline;}
+span.symbol {cursor: pointer;}
+      </style>
+</head>
+<body>
+<h1><strong>31. 
+Отчет сравнения файлов</strong></h1>
+<p>
+Сгенерирован в <strong>Araxis Merge</strong>
+: <strong>29.08.2019 1:40:10</strong>
+. Посетите <a href="https://www.araxis.com/" title="Официальный сайт Araxis">www.araxis.com</a>
+ для получения информации о сравнении. Это сообщение использует XHTML и CSS2 и лучше всего отображается в последних версиях браузеров. Для получения оптимальных результатов при печати данного отчета используйте альбомную ориентацию и включите печать фоновых изображений и цветов в вашем браузере.</p>
+<h3><strong>31.1&nbsp;
+Сравнение файлов</strong></h3>
+<table class="bordered">
+<tr>
+<th>#</th>
+<th>
+Расположение</th>
+<th>
+Файл</th>
+<th>
+Изменен</th>
+</tr>
+<tr>
+<td>1</td>
+<td>C:\PS3\FirmwareExtractor\Firmware_4.82\Part5_dec\dev_flash\vsh\module</td>
+<td>msmw2.elf</td>
+<td>Wed Aug 28 18:45:58 2019 UTC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C:\PS3\FirmwareExtractor\Firmware_4.84\Part5_dec\dev_flash\vsh\module</td>
+<td>msmw2.elf</td>
+<td>Wed Aug 28 13:39:36 2019 UTC</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C:\PS3\FirmwareExtractor\Firmware_4.85\Part5_dec\dev_flash\vsh\module</td>
+<td>msmw2.elf</td>
+<td>Wed Aug 28 11:08:33 2019 UTC</td>
+</tr>
+<tr>
+<td colspan="4">
+<strong>
+Примечание:</strong>
+ Объединение полагает, что второй файл будет обобщением других.</td>
+</tr>
+</table>
+<h3><strong>31.2&nbsp;
+Детали сравнения</strong></h3>
+<table class="bordered">
+<tr>
+<th rowspan="2" style="vertical-align: bottom;">
+Описание</th>
+<th colspan="2">
+Между<br />
+файлами 1 и 2</th>
+<th colspan="2">
+Между<br />
+Файлами 2 и 3</th>
+<th colspan="2">
+Относительно<br />
+Обобщения</th>
+</tr>
+<tr>
+<th style="text-align: right;">
+Текстовые блоки</th>
+<th style="text-align: right;">
+Строки</th>
+<th style="text-align: right;">
+Текстовые блоки</th>
+<th style="text-align: right;">
+Строки</th>
+<th style="text-align: right;">
+Текстовые блоки</th>
+<th style="text-align: right;">
+Строки</th>
+</tr>
+<tr>
+<td>
+Без изменений</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10234</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10234</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>
+Измененных</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>
+Вставленных</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>
+Не связанных</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td colspan="7">
+<strong>
+Примечание:</strong>
+ Автоматическое объединение будет произведено 2
+ конфликт(ов).</td>
+</tr>
+</table>
+<h3><strong>31.3&nbsp;
+Параметры сравнения</strong></h3>
+<table class="bordered" style="width: 55em;">
+<tr>
+<th>
+Пробел</th>
+<td>
+Все различия в пробелах в пределах строки игнорируются<br /></td>
+</tr>
+<tr>
+<th>
+Регистр символа</th>
+<td>
+Различия в регистре символов игнорируются</td>
+</tr>
+<tr>
+<th>
+Конец строки</th>
+<td>
+Различия в окончаниях строк (<code>CR</code>
+ и <code>LF</code>
+ символах) игнорируются</td>
+</tr>
+<tr>
+<th>
+CR/LF символы</th>
+<td>
+Не показаны в деталях сравнения</td>
+</tr>
+<tr>
+<th>Активные правила сопряжения строк</th>
+<td></td>
+</tr>
+</table>
+<h3><strong>31.4&nbsp;
+Активные регулярные выражения</strong></h3>
+<p>
+Нет активных регулярных выражений.</p>
+<h3><strong>31.5&nbsp;
+Детали сравнения</strong></h3>
+<table class="mgRowGroup">
+<col style="width: 1em;" />
+<col width="*" />
+<col style="width: 1em;" />
+<col style="width: 1em;" />
+<col width="*" />
+<col style="width: 1em;" />
+<col style="width: 1em;" />
+<col width="*" />
+<tr>
+<td class="U1" style="text-decoration: none;">&nbsp;</td>
+<td class="U1">
+<span class="U1">&nbsp;\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;not&nbsp;OMA&nbsp;</span>
+<span class="U1">file&nbsp;forma</span>
+<span class="U1">t.\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">oma_create</span>
+<span class="U1">_context&nbsp;o</span>
+<span class="U1">mg_oma_get</span>
+<span class="U1">_codec_dat</span>
+<span class="U1">a_header&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="UU2" style="text-decoration: none;">&nbsp;</td>
+<td class="UU2">
+<span class="UU2">&nbsp;\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;not&nbsp;OMA&nbsp;</span>
+<span class="UU2">file&nbsp;forma</span>
+<span class="UU2">t.\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">oma_create</span>
+<span class="UU2">_context&nbsp;o</span>
+<span class="UU2">mg_oma_get</span>
+<span class="UU2">_codec_dat</span>
+<span class="UU2">a_header&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="U3" style="text-decoration: none;">&nbsp;</td>
+<td class="U3">
+<span class="U3">&nbsp;\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U3">)&nbsp;not&nbsp;OMA&nbsp;</span>
+<span class="U3">file&nbsp;forma</span>
+<span class="U3">t.\x0000\x0000\x0000\x0000omg_</span>
+<span class="U3">oma_create</span>
+<span class="U3">_context&nbsp;o</span>
+<span class="U3">mg_oma_get</span>
+<span class="U3">_codec_dat</span>
+<span class="U3">a_header&nbsp;</span>
+</td>
+</tr>
+<tr>
+<td class="C1" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgC1">
+<span class="U1">&nbsp;\x0000omg_oma_</span>
+<span class="U1">create_con</span>
+<span class="U1">text()&nbsp;exi</span>
+<span class="U1">t\x0000\x0000\x0000build&nbsp;</span>
+<span class="U1">@&nbsp;</span>
+<span class="C1">Aug&nbsp;24&nbsp;201</span>
+<span class="C1">7&nbsp;16:02:26</span>
+<span class="U1">\x0000\x0000\x0000\x0000omg_om</span>
+<span class="U1">a_create_f</span>
+<span class="U1">rame_at_he</span>
+<span class="U1">ad()&nbsp;enter</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;paramete</span>
+<span class="U1">r&nbsp;is&nbsp;inval</span>
+<span class="U1">id.\x0000\x0000\x0000omg_</span>
+<span class="U1">oma_create</span>
+<span class="U1">_frame_at_</span>
+<span class="U1">head()&nbsp;exi</span>
+<span class="U1">t\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">oma_create</span>
+<span class="U1">_frame()&nbsp;e</span>
+<span class="U1">nter\x0000\x0000\x0000\x0000om</span>
+<span class="U1">g_id3_v2_c</span>
+<span class="U1">reate_fram</span>
+<span class="U1">e&nbsp;error</span>
+<span class="U1" />
+</td>
+<td>&nbsp;</td>
+<td class="CC2" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgCC2">
+<span class="UU2">&nbsp;\x0000omg_oma_</span>
+<span class="UU2">create_con</span>
+<span class="UU2">text()&nbsp;exi</span>
+<span class="UU2">t\x0000\x0000\x0000build&nbsp;</span>
+<span class="UU2">@&nbsp;</span>
+<span class="CU2">J</span>
+<span class="CC2">an&nbsp;&nbsp;8&nbsp;2019</span>
+<span class="CC2">&nbsp;17:26:3</span>
+<span class="CU2">1</span>
+<span class="UU2">\x0000\x0000\x0000\x0000omg_om</span>
+<span class="UU2">a_create_f</span>
+<span class="UU2">rame_at_he</span>
+<span class="UU2">ad()&nbsp;enter</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;paramete</span>
+<span class="UU2">r&nbsp;is&nbsp;inval</span>
+<span class="UU2">id.\x0000\x0000\x0000omg_</span>
+<span class="UU2">oma_create</span>
+<span class="UU2">_frame_at_</span>
+<span class="UU2">head()&nbsp;exi</span>
+<span class="UU2">t\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">oma_create</span>
+<span class="UU2">_frame()&nbsp;e</span>
+<span class="UU2">nter\x0000\x0000\x0000\x0000om</span>
+<span class="UU2">g_id3_v2_c</span>
+<span class="UU2">reate_fram</span>
+<span class="UU2">e&nbsp;error</span>
+<span class="UU2" />
+</td>
+<td>&nbsp;</td>
+<td class="C3" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgC3">
+<span class="U3">&nbsp;\x0000omg_oma_</span>
+<span class="U3">create_con</span>
+<span class="U3">text()&nbsp;exi</span>
+<span class="U3">t\x0000\x0000\x0000build&nbsp;</span>
+<span class="U3">@&nbsp;J</span>
+<span class="C3">ul&nbsp;23&nbsp;2019</span>
+<span class="C3">&nbsp;23:27:4</span>
+<span class="U3">1\x0000\x0000\x0000\x0000omg_o</span>
+<span class="U3">ma_create_</span>
+<span class="U3">frame_at_h</span>
+<span class="U3">ead()&nbsp;ente</span>
+<span class="U3">r\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;paramet</span>
+<span class="U3">er&nbsp;is&nbsp;inva</span>
+<span class="U3">lid.\x0000\x0000\x0000omg</span>
+<span class="U3">_oma_creat</span>
+<span class="U3">e_frame_at</span>
+<span class="U3">_head()&nbsp;ex</span>
+<span class="U3">it\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_oma_creat</span>
+<span class="U3">e_frame()&nbsp;</span>
+<span class="U3">enter\x0000\x0000\x0000\x0000o</span>
+<span class="U3">mg_id3_v2_</span>
+<span class="U3">create_fra</span>
+<span class="U3">me&nbsp;error</span>
+<span class="U3" />
+</td>
+</tr>
+<tr>
+<td class="U1" style="text-decoration: none;">&nbsp;</td>
+<td class="U1">
+<span class="U1">\x0000\x0000omg_oma_</span>
+<span class="U1">create_fra</span>
+<span class="U1">me()&nbsp;exit\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;not&nbsp;supp</span>
+<span class="U1">ort&nbsp;sampli</span>
+<span class="U1">ng&nbsp;rate.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;not&nbsp;supp</span>
+<span class="U1">ort&nbsp;codec.</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;not&nbsp;su</span>
+<span class="U1">pport&nbsp;OMA&nbsp;</span>
+<span class="U1">Version.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;not&nbsp;su</span>
+<span class="U1">pport&nbsp;encr</span>
+<span class="U1">yption.\x0000om</span>
+<span class="U1">g_oma_crea</span>
+<span class="U1">te_codec_d</span>
+<span class="U1">ata_header</span>
+<span class="U1">()&nbsp;enter\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">oma_create</span>
+<span class="U1">_codec_dat</span>
+<span class="U1">a_header()</span>
+<span class="U1">&nbsp;exit\x0000omg_</span>
+<span class="U1">oma_get_cr</span>
+<span class="U1">eated_tag_</span>
+<span class="U1">data()&nbsp;ent</span>
+<span class="U1">er\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">oma_get_cr</span>
+<span class="U1">eated_tag_</span>
+<span class="U1">data()&nbsp;omg</span>
+<span class="U1">_id3_v2_ge</span>
+<span class="U1">t_created_</span>
+<span class="U1">tag_data</span>
+</td>
+<td>&nbsp;</td>
+<td class="UU2" style="text-decoration: none;">&nbsp;</td>
+<td class="UU2">
+<span class="UU2">\x0000\x0000omg_oma_</span>
+<span class="UU2">create_fra</span>
+<span class="UU2">me()&nbsp;exit\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;not&nbsp;supp</span>
+<span class="UU2">ort&nbsp;sampli</span>
+<span class="UU2">ng&nbsp;rate.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;not&nbsp;supp</span>
+<span class="UU2">ort&nbsp;codec.</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;not&nbsp;su</span>
+<span class="UU2">pport&nbsp;OMA&nbsp;</span>
+<span class="UU2">Version.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;not&nbsp;su</span>
+<span class="UU2">pport&nbsp;encr</span>
+<span class="UU2">yption.\x0000om</span>
+<span class="UU2">g_oma_crea</span>
+<span class="UU2">te_codec_d</span>
+<span class="UU2">ata_header</span>
+<span class="UU2">()&nbsp;enter\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">oma_create</span>
+<span class="UU2">_codec_dat</span>
+<span class="UU2">a_header()</span>
+<span class="UU2">&nbsp;exit\x0000omg_</span>
+<span class="UU2">oma_get_cr</span>
+<span class="UU2">eated_tag_</span>
+<span class="UU2">data()&nbsp;ent</span>
+<span class="UU2">er\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">oma_get_cr</span>
+<span class="UU2">eated_tag_</span>
+<span class="UU2">data()&nbsp;omg</span>
+<span class="UU2">_id3_v2_ge</span>
+<span class="UU2">t_created_</span>
+<span class="UU2">tag_data</span>
+</td>
+<td>&nbsp;</td>
+<td class="U3" style="text-decoration: none;">&nbsp;</td>
+<td class="U3">
+<span class="U3">\x0000\x0000omg_oma_</span>
+<span class="U3">create_fra</span>
+<span class="U3">me()&nbsp;exit\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U3">)&nbsp;not&nbsp;supp</span>
+<span class="U3">ort&nbsp;sampli</span>
+<span class="U3">ng&nbsp;rate.\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U3">)&nbsp;not&nbsp;supp</span>
+<span class="U3">ort&nbsp;codec.</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U3">s()&nbsp;not&nbsp;su</span>
+<span class="U3">pport&nbsp;OMA&nbsp;</span>
+<span class="U3">Version.\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U3">s()&nbsp;not&nbsp;su</span>
+<span class="U3">pport&nbsp;encr</span>
+<span class="U3">yption.\x0000om</span>
+<span class="U3">g_oma_crea</span>
+<span class="U3">te_codec_d</span>
+<span class="U3">ata_header</span>
+<span class="U3">()&nbsp;enter\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U3">oma_create</span>
+<span class="U3">_codec_dat</span>
+<span class="U3">a_header()</span>
+<span class="U3">&nbsp;exit\x0000omg_</span>
+<span class="U3">oma_get_cr</span>
+<span class="U3">eated_tag_</span>
+<span class="U3">data()&nbsp;ent</span>
+<span class="U3">er\x0000\x0000\x0000\x0000omg_</span>
+<span class="U3">oma_get_cr</span>
+<span class="U3">eated_tag_</span>
+<span class="U3">data()&nbsp;omg</span>
+<span class="U3">_id3_v2_ge</span>
+<span class="U3">t_created_</span>
+<span class="U3">tag_data</span>
+</td>
+</tr>
+<tr>
+<td class="U1" style="text-decoration: none;">&nbsp;</td>
+<td class="U1">
+<span class="U1">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U1">_id3_creat</span>
+<span class="U1">e_context&nbsp;</span>
+<span class="U1">omg_id3_v2</span>
+<span class="U1">_write_tag</span>
+<span class="U1">&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="UU2" style="text-decoration: none;">&nbsp;</td>
+<td class="UU2">
+<span class="UU2">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="UU2">_id3_creat</span>
+<span class="UU2">e_context&nbsp;</span>
+<span class="UU2">omg_id3_v2</span>
+<span class="UU2">_write_tag</span>
+<span class="UU2">&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="U3" style="text-decoration: none;">&nbsp;</td>
+<td class="U3">
+<span class="U3">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_creat</span>
+<span class="U3">e_context&nbsp;</span>
+<span class="U3">omg_id3_v2</span>
+<span class="U3">_write_tag</span>
+<span class="U3">&nbsp;</span>
+</td>
+</tr>
+<tr>
+<td class="C1" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgC1">
+<span class="U1">&nbsp;\x0000\x0000omg_id3</span>
+<span class="U1">_create_co</span>
+<span class="U1">ntext()&nbsp;ex</span>
+<span class="U1">it\x0000\x0000\x0000omg_i</span>
+<span class="U1">d3_v2_reco</span>
+<span class="U1">ver()&nbsp;ente</span>
+<span class="U1">r\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U1">%s()&nbsp;backu</span>
+<span class="U1">p_file&nbsp;omg</span>
+<span class="U1">_open()&nbsp;fa</span>
+<span class="U1">iled.\x0000\x0000.ID</span>
+<span class="U1">3_RECOVER_</span>
+<span class="U1">TEMP_XXXXX</span>
+<span class="U1">X\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U1">n&nbsp;%s()&nbsp;bac</span>
+<span class="U1">kupFile&nbsp;OM</span>
+<span class="U1">G_OMA_READ</span>
+<span class="U1">()&nbsp;failed.</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U1">%s()&nbsp;omg_c</span>
+<span class="U1">lose()&nbsp;fai</span>
+<span class="U1">led.\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U1">n&nbsp;%s()&nbsp;omg</span>
+<span class="U1">_unlink()&nbsp;</span>
+<span class="U1">failed.\x0000\x0000\x0000</span>
+<span class="U1">\x0000omg_id3_v</span>
+<span class="U1">2_recover(</span>
+<span class="U1">)&nbsp;exit\x0000\x0000\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000omg_id3</span>
+<span class="U1">_v2_backup</span>
+<span class="U1">()&nbsp;enter\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U1">()&nbsp;backup&nbsp;</span>
+<span class="U1">file&nbsp;omg_o</span>
+<span class="U1">pen()&nbsp;fail</span>
+<span class="U1">ed.\x0000\x0000in&nbsp;%s</span>
+<span class="U1">()&nbsp;backup&nbsp;</span>
+<span class="U1">file&nbsp;omg_w</span>
+<span class="U1">rite()&nbsp;fai</span>
+<span class="U1">led.\x0000in&nbsp;%s</span>
+<span class="U1">()&nbsp;omg_fsy</span>
+<span class="U1">nc()&nbsp;faile</span>
+<span class="U1">d.\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U1">_id3_v2_ba</span>
+<span class="U1">ckup()&nbsp;exi</span>
+<span class="U1">t\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000b</span>
+<span class="U1">uild&nbsp;@&nbsp;</span>
+<span class="C1">Aug&nbsp;24&nbsp;201</span>
+<span class="C1">7&nbsp;16:02:28</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;omg_fsyn</span>
+<span class="U1">c()&nbsp;failed</span>
+<span class="U1">.\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_cl</span>
+<span class="U1">ose()&nbsp;fail</span>
+<span class="U1">ed.\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="U1">&nbsp;%s()&nbsp;OMG_</span>
+<span class="U1">OMA_WRITE(</span>
+<span class="U1">)&nbsp;failed.\x0000</span>
+<span class="U1">in&nbsp;%s()&nbsp;OM</span>
+<span class="U1">G_OMA_READ</span>
+<span class="U1">()&nbsp;failed.</span>
+<span class="U1">\x0000\x0000in&nbsp;%s()&nbsp;</span>
+<span class="U1">omg_lseek(</span>
+<span class="U1">)&nbsp;failed.\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;mode&nbsp;is&nbsp;</span>
+<span class="U1">invalid.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_op</span>
+<span class="U1">en()&nbsp;faile</span>
+<span class="U1">d.\x0000\x0000\x0000\x0000\x0000\x0000..</span>
+<span class="U1">/netjuke/o</span>
+<span class="U1">malib/oma/</span>
+<span class="U1">src/omg_id</span>
+<span class="U1">3_utils.cp</span>
+<span class="U1">p:652&nbsp;fram</span>
+<span class="U1">e\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;OMG_OMA_</span>
+<span class="U1">WRITE()&nbsp;fa</span>
+<span class="U1">iled.\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_ls</span>
+<span class="U1">eek()&nbsp;fail</span>
+<span class="U1">ed.\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="U1">&nbsp;%s()&nbsp;omg_</span>
+<span class="U1">close()&nbsp;fa</span>
+<span class="U1">iled.\x0000\x0000\x0000\x0000\x0000</span>
+<span class="U1">/dev_hdd0/</span>
+<span class="U1">tmp/msmw/m</span>
+<span class="U1">usic/temp_</span>
+<span class="U1">edit_2.oma</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="U1">&nbsp;%s()&nbsp;omg_</span>
+<span class="U1">open()&nbsp;fai</span>
+<span class="U1">led.\x0000\x0000\x0000\x0000\x0000\x0000</span>
+<span class="U1">../netjuke</span>
+<span class="U1">/omalib/om</span>
+<span class="U1">a/src/omg_</span>
+<span class="U1">id3_utils.</span>
+<span class="U1">cpp:539&nbsp;(s</span>
+<span class="U1">trlen((con</span>
+<span class="U1">st&nbsp;char*)t</span>
+<span class="U1">emp_file)&nbsp;</span>
+<span class="U1">&lt;&nbsp;OMG_ID3_</span>
+<span class="U1">MAXPATHLEN</span>
+<span class="U1">&nbsp;+&nbsp;1)\x0000\x0000\x0000\x0000\x0000</span>
+<span class="U1">\x0000\x0000in&nbsp;%s()&nbsp;</span>
+<span class="U1">omg_fsync(</span>
+<span class="U1">)&nbsp;failed.\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000/dev_h</span>
+<span class="U1">dd0/tmp/ms</span>
+<span class="U1">mw/music/t</span>
+<span class="U1">emp_edit.o</span>
+<span class="U1">ma\x0000\x0000../net</span>
+<span class="U1">juke/omali</span>
+<span class="U1">b/oma/src/</span>
+<span class="U1">omg_id3_ut</span>
+<span class="U1">ils.cpp:39</span>
+<span class="U1">4&nbsp;(strlen(</span>
+<span class="U1">(const&nbsp;cha</span>
+<span class="U1">r*)temp_fi</span>
+<span class="U1">le)&nbsp;&lt;&nbsp;OMG_</span>
+<span class="U1">ID3_MAXPAT</span>
+<span class="U1">HLEN&nbsp;+&nbsp;1)\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_om</span>
+<span class="U1">a_calloc()</span>
+<span class="U1">&nbsp;failed.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000TAG\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;ID3v1&nbsp;is</span>
+<span class="U1">&nbsp;not&nbsp;found</span>
+<span class="U1">.\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_rem</span>
+<span class="U1">ove_extend</span>
+<span class="U1">ed_header(</span>
+<span class="U1">)&nbsp;enter\x0000\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="U1">)&nbsp;paramete</span>
+<span class="U1">r&nbsp;is&nbsp;inval</span>
+<span class="U1">id.\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;conten</span>
+<span class="U1">t&nbsp;not&nbsp;supp</span>
+<span class="U1">ort&nbsp;ex_hea</span>
+<span class="U1">der.\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;transa</span>
+<span class="U1">ction&nbsp;is&nbsp;i</span>
+<span class="U1">nvalid.\x0000om</span>
+<span class="U1">g_id3_v2_r</span>
+<span class="U1">emove_exte</span>
+<span class="U1">nded_heade</span>
+<span class="U1">r()&nbsp;exit\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_add</span>
+<span class="U1">_extended_</span>
+<span class="U1">header()&nbsp;e</span>
+<span class="U1">nter\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_om</span>
+<span class="U1">a_calloc()</span>
+<span class="U1">&nbsp;failed.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_add</span>
+<span class="U1">_extended_</span>
+<span class="U1">header()&nbsp;e</span>
+<span class="U1">xit\x0000\x0000\x0000in&nbsp;%</span>
+<span class="U1">s()&nbsp;omg_om</span>
+<span class="U1">a_malloc()</span>
+<span class="U1">&nbsp;failed.\x0000\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_cre</span>
+<span class="U1">ate_frame_</span>
+<span class="U1">at_head()&nbsp;</span>
+<span class="U1">enter\x0000omg_</span>
+<span class="U1">id3_v2_cre</span>
+<span class="U1">ate_frame_</span>
+<span class="U1">at_head()&nbsp;</span>
+<span class="U1">exit\x0000\x0000omg_</span>
+<span class="U1">id3_v2_add</span>
+<span class="U1">_frame_at_</span>
+<span class="U1">head()&nbsp;ent</span>
+<span class="U1">er\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_add</span>
+<span class="U1">_frame_at_</span>
+<span class="U1">head()&nbsp;exi</span>
+<span class="U1">t\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="U1">id3_v2_cre</span>
+<span class="U1">ate_frame(</span>
+<span class="U1">)&nbsp;enter\x0000om</span>
+<span class="U1">g_id3_v2_c</span>
+<span class="U1">reate_fram</span>
+<span class="U1">e()&nbsp;exit\x0000\x0000</span>
+<span class="U1">omg_id3_v2</span>
+<span class="U1">_add_frame</span>
+<span class="U1">()&nbsp;enter\x0000\x0000</span>
+<span class="U1">\x0000\x0000omg_id3_</span>
+<span class="U1">v2_add_fra</span>
+<span class="U1">me()&nbsp;exit\x0000</span>
+<span class="U1">\x0000\x0000\x0000\x0000../net</span>
+<span class="U1">juke/omali</span>
+<span class="U1">b/oma/src/</span>
+<span class="U1">omg_id3_v2</span>
+<span class="U1">_editor.cp</span>
+<span class="U1">p:1476&nbsp;fra</span>
+<span class="U1">me\x0000\x0000\x0000\x0000\x0000\x0000er</span>
+<span class="U1">ror&nbsp;szFram</span>
+<span class="U1">eHeader&nbsp;st</span>
+<span class="U1">atic_cast&nbsp;</span>
+<span class="U1">fatal&nbsp;</span>
+<span class="U1" />
+</td>
+<td>&nbsp;</td>
+<td class="CC2" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgCC2">
+<span class="UU2">&nbsp;\x0000\x0000omg_id3</span>
+<span class="UU2">_create_co</span>
+<span class="UU2">ntext()&nbsp;ex</span>
+<span class="UU2">it\x0000\x0000\x0000omg_i</span>
+<span class="UU2">d3_v2_reco</span>
+<span class="UU2">ver()&nbsp;ente</span>
+<span class="UU2">r\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="UU2">%s()&nbsp;backu</span>
+<span class="UU2">p_file&nbsp;omg</span>
+<span class="UU2">_open()&nbsp;fa</span>
+<span class="UU2">iled.\x0000\x0000.ID</span>
+<span class="UU2">3_RECOVER_</span>
+<span class="UU2">TEMP_XXXXX</span>
+<span class="UU2">X\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="UU2">n&nbsp;%s()&nbsp;bac</span>
+<span class="UU2">kupFile&nbsp;OM</span>
+<span class="UU2">G_OMA_READ</span>
+<span class="UU2">()&nbsp;failed.</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="UU2">%s()&nbsp;omg_c</span>
+<span class="UU2">lose()&nbsp;fai</span>
+<span class="UU2">led.\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="UU2">n&nbsp;%s()&nbsp;omg</span>
+<span class="UU2">_unlink()&nbsp;</span>
+<span class="UU2">failed.\x0000\x0000\x0000</span>
+<span class="UU2">\x0000omg_id3_v</span>
+<span class="UU2">2_recover(</span>
+<span class="UU2">)&nbsp;exit\x0000\x0000\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000omg_id3</span>
+<span class="UU2">_v2_backup</span>
+<span class="UU2">()&nbsp;enter\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="UU2">()&nbsp;backup&nbsp;</span>
+<span class="UU2">file&nbsp;omg_o</span>
+<span class="UU2">pen()&nbsp;fail</span>
+<span class="UU2">ed.\x0000\x0000in&nbsp;%s</span>
+<span class="UU2">()&nbsp;backup&nbsp;</span>
+<span class="UU2">file&nbsp;omg_w</span>
+<span class="UU2">rite()&nbsp;fai</span>
+<span class="UU2">led.\x0000in&nbsp;%s</span>
+<span class="UU2">()&nbsp;omg_fsy</span>
+<span class="UU2">nc()&nbsp;faile</span>
+<span class="UU2">d.\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="UU2">_id3_v2_ba</span>
+<span class="UU2">ckup()&nbsp;exi</span>
+<span class="UU2">t\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000b</span>
+<span class="UU2">uild&nbsp;@&nbsp;</span>
+<span class="CU2">J</span>
+<span class="CC2">an&nbsp;&nbsp;8&nbsp;2019</span>
+<span class="CC2">&nbsp;17:26:3</span>
+<span class="CU2">3</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;omg_fsyn</span>
+<span class="UU2">c()&nbsp;failed</span>
+<span class="UU2">.\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_cl</span>
+<span class="UU2">ose()&nbsp;fail</span>
+<span class="UU2">ed.\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="UU2">&nbsp;%s()&nbsp;OMG_</span>
+<span class="UU2">OMA_WRITE(</span>
+<span class="UU2">)&nbsp;failed.\x0000</span>
+<span class="UU2">in&nbsp;%s()&nbsp;OM</span>
+<span class="UU2">G_OMA_READ</span>
+<span class="UU2">()&nbsp;failed.</span>
+<span class="UU2">\x0000\x0000in&nbsp;%s()&nbsp;</span>
+<span class="UU2">omg_lseek(</span>
+<span class="UU2">)&nbsp;failed.\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;mode&nbsp;is&nbsp;</span>
+<span class="UU2">invalid.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_op</span>
+<span class="UU2">en()&nbsp;faile</span>
+<span class="UU2">d.\x0000\x0000\x0000\x0000\x0000\x0000..</span>
+<span class="UU2">/netjuke/o</span>
+<span class="UU2">malib/oma/</span>
+<span class="UU2">src/omg_id</span>
+<span class="UU2">3_utils.cp</span>
+<span class="UU2">p:652&nbsp;fram</span>
+<span class="UU2">e\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;OMG_OMA_</span>
+<span class="UU2">WRITE()&nbsp;fa</span>
+<span class="UU2">iled.\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_ls</span>
+<span class="UU2">eek()&nbsp;fail</span>
+<span class="UU2">ed.\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="UU2">&nbsp;%s()&nbsp;omg_</span>
+<span class="UU2">close()&nbsp;fa</span>
+<span class="UU2">iled.\x0000\x0000\x0000\x0000\x0000</span>
+<span class="UU2">/dev_hdd0/</span>
+<span class="UU2">tmp/msmw/m</span>
+<span class="UU2">usic/temp_</span>
+<span class="UU2">edit_2.oma</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000in</span>
+<span class="UU2">&nbsp;%s()&nbsp;omg_</span>
+<span class="UU2">open()&nbsp;fai</span>
+<span class="UU2">led.\x0000\x0000\x0000\x0000\x0000\x0000</span>
+<span class="UU2">../netjuke</span>
+<span class="UU2">/omalib/om</span>
+<span class="UU2">a/src/omg_</span>
+<span class="UU2">id3_utils.</span>
+<span class="UU2">cpp:539&nbsp;(s</span>
+<span class="UU2">trlen((con</span>
+<span class="UU2">st&nbsp;char*)t</span>
+<span class="UU2">emp_file)&nbsp;</span>
+<span class="UU2">&lt;&nbsp;OMG_ID3_</span>
+<span class="UU2">MAXPATHLEN</span>
+<span class="UU2">&nbsp;+&nbsp;1)\x0000\x0000\x0000\x0000\x0000</span>
+<span class="UU2">\x0000\x0000in&nbsp;%s()&nbsp;</span>
+<span class="UU2">omg_fsync(</span>
+<span class="UU2">)&nbsp;failed.\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000/dev_h</span>
+<span class="UU2">dd0/tmp/ms</span>
+<span class="UU2">mw/music/t</span>
+<span class="UU2">emp_edit.o</span>
+<span class="UU2">ma\x0000\x0000../net</span>
+<span class="UU2">juke/omali</span>
+<span class="UU2">b/oma/src/</span>
+<span class="UU2">omg_id3_ut</span>
+<span class="UU2">ils.cpp:39</span>
+<span class="UU2">4&nbsp;(strlen(</span>
+<span class="UU2">(const&nbsp;cha</span>
+<span class="UU2">r*)temp_fi</span>
+<span class="UU2">le)&nbsp;&lt;&nbsp;OMG_</span>
+<span class="UU2">ID3_MAXPAT</span>
+<span class="UU2">HLEN&nbsp;+&nbsp;1)\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_om</span>
+<span class="UU2">a_calloc()</span>
+<span class="UU2">&nbsp;failed.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000TAG\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;ID3v1&nbsp;is</span>
+<span class="UU2">&nbsp;not&nbsp;found</span>
+<span class="UU2">.\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_rem</span>
+<span class="UU2">ove_extend</span>
+<span class="UU2">ed_header(</span>
+<span class="UU2">)&nbsp;enter\x0000\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000in&nbsp;%s(</span>
+<span class="UU2">)&nbsp;paramete</span>
+<span class="UU2">r&nbsp;is&nbsp;inval</span>
+<span class="UU2">id.\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;conten</span>
+<span class="UU2">t&nbsp;not&nbsp;supp</span>
+<span class="UU2">ort&nbsp;ex_hea</span>
+<span class="UU2">der.\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;transa</span>
+<span class="UU2">ction&nbsp;is&nbsp;i</span>
+<span class="UU2">nvalid.\x0000om</span>
+<span class="UU2">g_id3_v2_r</span>
+<span class="UU2">emove_exte</span>
+<span class="UU2">nded_heade</span>
+<span class="UU2">r()&nbsp;exit\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_add</span>
+<span class="UU2">_extended_</span>
+<span class="UU2">header()&nbsp;e</span>
+<span class="UU2">nter\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_om</span>
+<span class="UU2">a_calloc()</span>
+<span class="UU2">&nbsp;failed.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_add</span>
+<span class="UU2">_extended_</span>
+<span class="UU2">header()&nbsp;e</span>
+<span class="UU2">xit\x0000\x0000\x0000in&nbsp;%</span>
+<span class="UU2">s()&nbsp;omg_om</span>
+<span class="UU2">a_malloc()</span>
+<span class="UU2">&nbsp;failed.\x0000\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_cre</span>
+<span class="UU2">ate_frame_</span>
+<span class="UU2">at_head()&nbsp;</span>
+<span class="UU2">enter\x0000omg_</span>
+<span class="UU2">id3_v2_cre</span>
+<span class="UU2">ate_frame_</span>
+<span class="UU2">at_head()&nbsp;</span>
+<span class="UU2">exit\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_add</span>
+<span class="UU2">_frame_at_</span>
+<span class="UU2">head()&nbsp;ent</span>
+<span class="UU2">er\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_add</span>
+<span class="UU2">_frame_at_</span>
+<span class="UU2">head()&nbsp;exi</span>
+<span class="UU2">t\x0000\x0000\x0000\x0000\x0000omg_</span>
+<span class="UU2">id3_v2_cre</span>
+<span class="UU2">ate_frame(</span>
+<span class="UU2">)&nbsp;enter\x0000om</span>
+<span class="UU2">g_id3_v2_c</span>
+<span class="UU2">reate_fram</span>
+<span class="UU2">e()&nbsp;exit\x0000\x0000</span>
+<span class="UU2">omg_id3_v2</span>
+<span class="UU2">_add_frame</span>
+<span class="UU2">()&nbsp;enter\x0000\x0000</span>
+<span class="UU2">\x0000\x0000omg_id3_</span>
+<span class="UU2">v2_add_fra</span>
+<span class="UU2">me()&nbsp;exit\x0000</span>
+<span class="UU2">\x0000\x0000\x0000\x0000../net</span>
+<span class="UU2">juke/omali</span>
+<span class="UU2">b/oma/src/</span>
+<span class="UU2">omg_id3_v2</span>
+<span class="UU2">_editor.cp</span>
+<span class="UU2">p:1476&nbsp;fra</span>
+<span class="UU2">me\x0000\x0000\x0000\x0000\x0000\x0000er</span>
+<span class="UU2">ror&nbsp;szFram</span>
+<span class="UU2">eHeader&nbsp;st</span>
+<span class="UU2">atic_cast&nbsp;</span>
+<span class="UU2">fatal&nbsp;</span>
+<span class="UU2" />
+</td>
+<td>&nbsp;</td>
+<td class="C3" style="text-decoration: none;">&nbsp;</td>
+<td class="nbgC3">
+<span class="U3">&nbsp;\x0000\x0000omg_id3</span>
+<span class="U3">_create_co</span>
+<span class="U3">ntext()&nbsp;ex</span>
+<span class="U3">it\x0000\x0000\x0000omg_i</span>
+<span class="U3">d3_v2_reco</span>
+<span class="U3">ver()&nbsp;ente</span>
+<span class="U3">r\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;backu</span>
+<span class="U3">p_file&nbsp;omg</span>
+<span class="U3">_open()&nbsp;fa</span>
+<span class="U3">iled.\x0000\x0000.ID</span>
+<span class="U3">3_RECOVER_</span>
+<span class="U3">TEMP_XXXXX</span>
+<span class="U3">X\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U3">n&nbsp;%s()&nbsp;bac</span>
+<span class="U3">kupFile&nbsp;OM</span>
+<span class="U3">G_OMA_READ</span>
+<span class="U3">()&nbsp;failed.</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_c</span>
+<span class="U3">lose()&nbsp;fai</span>
+<span class="U3">led.\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U3">n&nbsp;%s()&nbsp;omg</span>
+<span class="U3">_unlink()&nbsp;</span>
+<span class="U3">failed.\x0000\x0000\x0000</span>
+<span class="U3">\x0000omg_id3_v</span>
+<span class="U3">2_recover(</span>
+<span class="U3">)&nbsp;exit\x0000\x0000\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000omg_id3</span>
+<span class="U3">_v2_backup</span>
+<span class="U3">()&nbsp;enter\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;backup&nbsp;</span>
+<span class="U3">file&nbsp;omg_o</span>
+<span class="U3">pen()&nbsp;fail</span>
+<span class="U3">ed.\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;backup&nbsp;</span>
+<span class="U3">file&nbsp;omg_w</span>
+<span class="U3">rite()&nbsp;fai</span>
+<span class="U3">led.\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;omg_fsy</span>
+<span class="U3">nc()&nbsp;faile</span>
+<span class="U3">d.\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_ba</span>
+<span class="U3">ckup()&nbsp;exi</span>
+<span class="U3">t\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000b</span>
+<span class="U3">uild&nbsp;@&nbsp;J</span>
+<span class="C3">ul&nbsp;23&nbsp;2019</span>
+<span class="C3">&nbsp;23:27:4</span>
+<span class="U3">3\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;omg_fsy</span>
+<span class="U3">nc()&nbsp;faile</span>
+<span class="U3">d.\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_c</span>
+<span class="U3">lose()&nbsp;fai</span>
+<span class="U3">led.\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U3">n&nbsp;%s()&nbsp;OMG</span>
+<span class="U3">_OMA_WRITE</span>
+<span class="U3">()&nbsp;failed.</span>
+<span class="U3">\x0000in&nbsp;%s()&nbsp;O</span>
+<span class="U3">MG_OMA_REA</span>
+<span class="U3">D()&nbsp;failed</span>
+<span class="U3">.\x0000\x0000in&nbsp;%s()</span>
+<span class="U3">&nbsp;omg_lseek</span>
+<span class="U3">()&nbsp;failed.</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;mode&nbsp;is</span>
+<span class="U3">&nbsp;invalid.\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_o</span>
+<span class="U3">pen()&nbsp;fail</span>
+<span class="U3">ed.\x0000\x0000\x0000\x0000\x0000\x0000.</span>
+<span class="U3">./netjuke/</span>
+<span class="U3">omalib/oma</span>
+<span class="U3">/src/omg_i</span>
+<span class="U3">d3_utils.c</span>
+<span class="U3">pp:652&nbsp;fra</span>
+<span class="U3">me\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;OMG_OMA</span>
+<span class="U3">_WRITE()&nbsp;f</span>
+<span class="U3">ailed.\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_l</span>
+<span class="U3">seek()&nbsp;fai</span>
+<span class="U3">led.\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U3">n&nbsp;%s()&nbsp;omg</span>
+<span class="U3">_close()&nbsp;f</span>
+<span class="U3">ailed.\x0000\x0000\x0000\x0000</span>
+<span class="U3">\x0000/dev_hdd0</span>
+<span class="U3">/tmp/msmw/</span>
+<span class="U3">music/temp</span>
+<span class="U3">_edit_2.om</span>
+<span class="U3">a\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000i</span>
+<span class="U3">n&nbsp;%s()&nbsp;omg</span>
+<span class="U3">_open()&nbsp;fa</span>
+<span class="U3">iled.\x0000\x0000\x0000\x0000\x0000</span>
+<span class="U3">\x0000../netjuk</span>
+<span class="U3">e/omalib/o</span>
+<span class="U3">ma/src/omg</span>
+<span class="U3">_id3_utils</span>
+<span class="U3">.cpp:539&nbsp;(</span>
+<span class="U3">strlen((co</span>
+<span class="U3">nst&nbsp;char*)</span>
+<span class="U3">temp_file)</span>
+<span class="U3">&nbsp;&lt;&nbsp;OMG_ID3</span>
+<span class="U3">_MAXPATHLE</span>
+<span class="U3">N&nbsp;+&nbsp;1)\x0000\x0000\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000in&nbsp;%s()</span>
+<span class="U3">&nbsp;omg_fsync</span>
+<span class="U3">()&nbsp;failed.</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000/dev_</span>
+<span class="U3">hdd0/tmp/m</span>
+<span class="U3">smw/music/</span>
+<span class="U3">temp_edit.</span>
+<span class="U3">oma\x0000\x0000../ne</span>
+<span class="U3">tjuke/omal</span>
+<span class="U3">ib/oma/src</span>
+<span class="U3">/omg_id3_u</span>
+<span class="U3">tils.cpp:3</span>
+<span class="U3">94&nbsp;(strlen</span>
+<span class="U3">((const&nbsp;ch</span>
+<span class="U3">ar*)temp_f</span>
+<span class="U3">ile)&nbsp;&lt;&nbsp;OMG</span>
+<span class="U3">_ID3_MAXPA</span>
+<span class="U3">THLEN&nbsp;+&nbsp;1)</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_o</span>
+<span class="U3">ma_calloc(</span>
+<span class="U3">)&nbsp;failed.\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000TAG</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;ID3v1&nbsp;i</span>
+<span class="U3">s&nbsp;not&nbsp;foun</span>
+<span class="U3">d.\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_re</span>
+<span class="U3">move_exten</span>
+<span class="U3">ded_header</span>
+<span class="U3">()&nbsp;enter\x0000\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000in&nbsp;%s</span>
+<span class="U3">()&nbsp;paramet</span>
+<span class="U3">er&nbsp;is&nbsp;inva</span>
+<span class="U3">lid.\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;conte</span>
+<span class="U3">nt&nbsp;not&nbsp;sup</span>
+<span class="U3">port&nbsp;ex_he</span>
+<span class="U3">ader.\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;trans</span>
+<span class="U3">action&nbsp;is&nbsp;</span>
+<span class="U3">invalid.\x0000o</span>
+<span class="U3">mg_id3_v2_</span>
+<span class="U3">remove_ext</span>
+<span class="U3">ended_head</span>
+<span class="U3">er()&nbsp;exit\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_ad</span>
+<span class="U3">d_extended</span>
+<span class="U3">_header()&nbsp;</span>
+<span class="U3">enter\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_o</span>
+<span class="U3">ma_calloc(</span>
+<span class="U3">)&nbsp;failed.\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_ad</span>
+<span class="U3">d_extended</span>
+<span class="U3">_header()&nbsp;</span>
+<span class="U3">exit\x0000\x0000\x0000in&nbsp;</span>
+<span class="U3">%s()&nbsp;omg_o</span>
+<span class="U3">ma_malloc(</span>
+<span class="U3">)&nbsp;failed.\x0000</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_cr</span>
+<span class="U3">eate_frame</span>
+<span class="U3">_at_head()</span>
+<span class="U3">&nbsp;enter\x0000omg</span>
+<span class="U3">_id3_v2_cr</span>
+<span class="U3">eate_frame</span>
+<span class="U3">_at_head()</span>
+<span class="U3">&nbsp;exit\x0000\x0000omg</span>
+<span class="U3">_id3_v2_ad</span>
+<span class="U3">d_frame_at</span>
+<span class="U3">_head()&nbsp;en</span>
+<span class="U3">ter\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_ad</span>
+<span class="U3">d_frame_at</span>
+<span class="U3">_head()&nbsp;ex</span>
+<span class="U3">it\x0000\x0000\x0000\x0000\x0000omg</span>
+<span class="U3">_id3_v2_cr</span>
+<span class="U3">eate_frame</span>
+<span class="U3">()&nbsp;enter\x0000o</span>
+<span class="U3">mg_id3_v2_</span>
+<span class="U3">create_fra</span>
+<span class="U3">me()&nbsp;exit\x0000</span>
+<span class="U3">\x0000omg_id3_v</span>
+<span class="U3">2_add_fram</span>
+<span class="U3">e()&nbsp;enter\x0000</span>
+<span class="U3">\x0000\x0000\x0000omg_id3</span>
+<span class="U3">_v2_add_fr</span>
+<span class="U3">ame()&nbsp;exit</span>
+<span class="U3">\x0000\x0000\x0000\x0000\x0000../ne</span>
+<span class="U3">tjuke/omal</span>
+<span class="U3">ib/oma/src</span>
+<span class="U3">/omg_id3_v</span>
+<span class="U3">2_editor.c</span>
+<span class="U3">pp:1476&nbsp;fr</span>
+<span class="U3">ame\x0000\x0000\x0000\x0000\x0000\x0000e</span>
+<span class="U3">rror&nbsp;szFra</span>
+<span class="U3">meHeader&nbsp;s</span>
+<span class="U3">tatic_cast</span>
+<span class="U3">&nbsp;fatal&nbsp;</span>
+<span class="U3" />
+</td>
+</tr>
+<tr>
+<td class="U1" style="text-decoration: none;">&nbsp;</td>
+<td class="U1">
+<span class="U1">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000e</span>
+<span class="U1">rror&nbsp;szFra</span>
+<span class="U1">meHeaderAd</span>
+<span class="U1">ditional&nbsp;s</span>
+<span class="U1">tatic_cast</span>
+<span class="U1">&nbsp;fatal&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="UU2" style="text-decoration: none;">&nbsp;</td>
+<td class="UU2">
+<span class="UU2">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000e</span>
+<span class="UU2">rror&nbsp;szFra</span>
+<span class="UU2">meHeaderAd</span>
+<span class="UU2">ditional&nbsp;s</span>
+<span class="UU2">tatic_cast</span>
+<span class="UU2">&nbsp;fatal&nbsp;</span>
+</td>
+<td>&nbsp;</td>
+<td class="U3" style="text-decoration: none;">&nbsp;</td>
+<td class="U3">
+<span class="U3">&nbsp;\x0000\x0000\x0000\x0000\x0000\x0000\x0000\x0000e</span>
+<span class="U3">rror&nbsp;szFra</span>
+<span class="U3">meHeaderAd</span>
+<span class="U3">ditional&nbsp;s</span>
+<span class="U3">tatic_cast</span>
+<span class="U3">&nbsp;fatal&nbsp;</span>
+</td>
+</tr>
+</table>
+<p class="copyright" style="margin-top: 25px; padding-top: 2px; border-top: solid #a0a0a0 1px; max-width: none;">
+Авторские права принадлежат  &copy; 1993–2018 Araxis Ltd (<a href="https://www.araxis.com/" title="Официальный сайт Araxis">www.araxis.com</a>
+). Все права защищены.</p>
+</body>
+</html>
